@@ -12,6 +12,10 @@ namespace dh {
 		bool active;
 
 	public:
+		Log() {
+			active = false;
+			logfile = nullptr;
+		}
 		Log(const char* filename, bool binary = true) : binary(binary), filename(filename) {
 			if (binary) fopen_s(&logfile, filename, "a+b");
 			else fopen_s(&logfile, filename, "a+");

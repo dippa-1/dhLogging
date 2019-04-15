@@ -42,12 +42,9 @@ namespace dh {
 			if (logfile == nullptr) return;
 			active = true;
 		}
-		void open(const char* filename, bool binary = true) {
+		void setFilename(const char* filename, bool binary = true) {
 			this->filename = filename;
 			this->binary = binary;
-			if (binary) fopen_s(&logfile, filename, "a+b");
-			else fopen_s(&logfile, filename, "a+");
-			active = true;
 		}
 	};
 }

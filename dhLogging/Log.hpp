@@ -22,7 +22,7 @@ namespace dh {
 			active = true;
 		}
 		~Log() {
-			fclose(logfile);
+			pause();
 		}
 
 		template <class T>

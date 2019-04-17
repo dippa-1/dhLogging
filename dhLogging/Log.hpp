@@ -49,5 +49,6 @@ namespace dh {
 			this->filename = filename;
 			if (a) start();
 		}
+		bool isActive(void) const { return active; }
 	};
 }

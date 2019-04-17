@@ -43,8 +43,11 @@ namespace dh {
 			active = true;
 		}
 		void setFilename(const char* filename, bool binary = true) {
-			this->filename = filename;
+			bool a = active;
+			pause();
 			this->binary = binary;
+			this->filename = filename;
+			if (a) start();
 		}
 	};
 }
